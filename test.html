@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Login Page</title>
+  <style>
+    /* Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff6b6b, #6b6bff, #6bff6b);
+      background-size: 300% 300%;
+      animation: gradientAnimation 6s infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Login Box Styling */
+    .login-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 30px 40px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .login-box h1 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .login-box input:focus {
+      border-color: #6b6bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(107, 107, 255, 0.6);
+    }
+
+    .login-box button {
+      background: linear-gradient(135deg, #6b6bff, #ff6b6b);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      box-shadow: 0 4px 10px rgba(255, 107, 107, 0.6);
+    }
+
+    /* Footer Styling */
+    .login-box .footer {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .login-box .footer a {
+      color: #6b6bff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .login-box .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Login</h1>
+    <form action="/submit-login" method="POST">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="footer">
+      <p>Don't have an account? <a href="/register">Sign up</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
